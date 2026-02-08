@@ -1,5 +1,5 @@
-name: remoteforpc
-description: "Remote Mouse - Control your Mac from your mobile device"
+name: macos_server
+description: "Remote Mouse - macOS server for receiving control commands"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,21 +35,24 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   
-  # Networking
-  web_socket_channel: ^3.0.0
-  network_info_plus: ^5.0.0
-  multicast_dns: ^0.3.0
+  # Server components
+  shelf: ^1.4.0
+  shelf_web_socket: ^2.0.0
   
-  # Device features
-  vibration: ^2.0.0
-  wakelock_plus: ^1.2.0
+  # System integration
+  tray_manager: ^0.2.0
+  window_manager: ^0.3.0
+  launch_at_startup: ^0.2.0
   
   # Storage
   shared_preferences: ^2.2.0
   
+  # Utilities
+  uuid: ^4.0.0
+  
   # Shared protocol
   remote_protocol:
-    path: packages/remote_protocol
+    path: ../packages/remote_protocol
 
 dev_dependencies:
   flutter_test:
