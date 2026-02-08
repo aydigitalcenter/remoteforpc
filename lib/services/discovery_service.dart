@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:multicast_dns/multicast_dns.dart';
 import 'package:remote_protocol/remote_protocol.dart';
 

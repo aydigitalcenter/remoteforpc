@@ -139,7 +139,8 @@ class _TrackpadWidgetState extends State<TrackpadWidget> {
   }
 
   Future<void> _vibrate() async {
-    if (await Vibration.hasVibrator() ?? false) {
+    final hasVibrator = await Vibration.hasVibrator();
+    if (hasVibrator == true) {
       Vibration.vibrate(duration: 10);
     }
   }
